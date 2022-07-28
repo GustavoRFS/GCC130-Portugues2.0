@@ -1,16 +1,23 @@
 grammar MinhaGramatica;
 
 dec: 'DECLARACOES';
-ALG: 'ALGORITMO';
 TIPO: 'int'|'flutuante'|'texto'|'vouf';
-ATR: 'atribuir';
+ATR: '=D';
 A: 'a';
 AP: '(';
 FP: ')';
 ESC: 'ESCREVA';
 ID: LETRA(DIGITO|LETRA)*;
 NUM: DIGITO+('.'DIGITO+)?;
-OP_ARIT: '+'|'-'|'*'|'/';
+OP_ARIT: '+'|'-'|'*'|'/'|'//'|'%';
+OP_REL: '=='|'<'|'>'|'<='|'>='|'!=';
+OP_BOL: 'e'|'ou'|'xou'|'nao';
+COND:'se'|'senao'|'senao se';
+REP:'para'|'enquanto';
+LER:'RECEBA';
+ESCREVER:'TÓMI';
+LINECOMMENT: '#' ~[\r\n]* -> skip;
+DEFFUNC: TIPO ID AP TIPO ID FP ;
 fragment LETRA: [a-zA-Z];
 fragment DIGITO: [0-9];
 WS: [ \r\t\n]* ->skip;
