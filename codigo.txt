@@ -1,0 +1,10 @@
+DECLARACOES
+int x
+real y
+int z
+
+ALGO%RITMO
+    atribuir 10.0 a x
+    atribuir 10 a y
+    atribuir (x+y) a z
+    ESCREVA z

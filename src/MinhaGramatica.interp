@@ -1,0 +1,38 @@
+token literal names:
+null
+'DECLARACOES'
+'ALGORITMO'
+null
+'atribuir'
+'a'
+'('
+')'
+'ESCREVA'
+null
+null
+null
+null
+null
+
+token symbolic names:
+null
+null
+ALG
+TIPO
+ATR
+A
+AP
+FP
+ESC
+ID
+NUM
+OP_ARIT
+WS
+ErrorChar
+
+rule names:
+dec
+
+
+atn:
+[4, 1, 13, 5, 2, 0, 7, 0, 1, 0, 1, 0, 1, 0, 0, 0, 1, 0, 0, 0, 3, 0, 2, 1, 0, 0, 0, 2, 3, 5, 1, 0, 0, 3, 1, 1, 0, 0, 0, 0]
