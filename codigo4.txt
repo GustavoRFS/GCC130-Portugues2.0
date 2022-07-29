@@ -6,5 +6,5 @@ CODIGO
 
     # Loop infinito mostrando para o usuário "CAVALO"
     enquanto (rodando){
-        TOMI "CAVALO\n";
+        TOMI "CAVALO";
     }
