@@ -1,4 +1,4 @@
-// Generated from .\src\MinhaGramatica.g4 by ANTLR 4.10.1
+// Generated from ./src/Portugues2.g4 by ANTLR 4.10.1
 import org.antlr.v4.runtime.atn.*;
 import org.antlr.v4.runtime.dfa.DFA;
 import org.antlr.v4.runtime.*;
@@ -9,15 +9,16 @@ import java.util.Iterator;
 import java.util.ArrayList;
 
 @SuppressWarnings({"all", "warnings", "unchecked", "unused", "cast"})
-public class MinhaGramaticaParser extends Parser {
+public class Portugues2Parser extends Parser {
 	static { RuntimeMetaData.checkVersion("4.10.1", RuntimeMetaData.VERSION); }
 
 	protected static final DFA[] _decisionToDFA;
 	protected static final PredictionContextCache _sharedContextCache =
 		new PredictionContextCache();
 	public static final int
-		T__0=1, ALG=2, TIPO=3, ATR=4, A=5, AP=6, FP=7, ESC=8, ID=9, NUM=10, OP_ARIT=11, 
-		WS=12, ErrorChar=13;
+		T__0=1, TIPO=2, ATR=3, AP=4, FP=5, AC=6, FC=7, ID=8, NUM=9, OP_ARIT=10, 
+		OP_REL=11, OP_BOL=12, COND=13, REP=14, LER=15, ESCREVER=16, LINECOMMENT=17, 
+		WS=18, ErrorChar=19;
 	public static final int
 		RULE_dec = 0;
 	private static String[] makeRuleNames() {
@@ -29,15 +30,16 @@ public class MinhaGramaticaParser extends Parser {
 
 	private static String[] makeLiteralNames() {
 		return new String[] {
-			null, "'DECLARACOES'", "'ALGORITMO'", null, "'atribuir'", "'a'", "'('", 
-			"')'", "'ESCREVA'"
+			null, "'DECLARACOES'", null, "'=D'", "'('", "')'", "'{'", "'}'", null, 
+			null, null, null, null, null, null, "'RECEBA'", "'T\\u00D3MI'"
 		};
 	}
 	private static final String[] _LITERAL_NAMES = makeLiteralNames();
 	private static String[] makeSymbolicNames() {
 		return new String[] {
-			null, null, "ALG", "TIPO", "ATR", "A", "AP", "FP", "ESC", "ID", "NUM", 
-			"OP_ARIT", "WS", "ErrorChar"
+			null, null, "TIPO", "ATR", "AP", "FP", "AC", "FC", "ID", "NUM", "OP_ARIT", 
+			"OP_REL", "OP_BOL", "COND", "REP", "LER", "ESCREVER", "LINECOMMENT", 
+			"WS", "ErrorChar"
 		};
 	}
 	private static final String[] _SYMBOLIC_NAMES = makeSymbolicNames();
@@ -75,7 +77,7 @@ public class MinhaGramaticaParser extends Parser {
 	}
 
 	@Override
-	public String getGrammarFileName() { return "MinhaGramatica.g4"; }
+	public String getGrammarFileName() { return "Portugues2.g4"; }
 
 	@Override
 	public String[] getRuleNames() { return ruleNames; }
@@ -86,7 +88,7 @@ public class MinhaGramaticaParser extends Parser {
 	@Override
 	public ATN getATN() { return _ATN; }
 
-	public MinhaGramaticaParser(TokenStream input) {
+	public Portugues2Parser(TokenStream input) {
 		super(input);
 		_interp = new ParserATNSimulator(this,_ATN,_decisionToDFA,_sharedContextCache);
 	}
@@ -98,11 +100,11 @@ public class MinhaGramaticaParser extends Parser {
 		@Override public int getRuleIndex() { return RULE_dec; }
 		@Override
 		public void enterRule(ParseTreeListener listener) {
-			if ( listener instanceof MinhaGramaticaListener ) ((MinhaGramaticaListener)listener).enterDec(this);
+			if ( listener instanceof Portugues2Listener ) ((Portugues2Listener)listener).enterDec(this);
 		}
 		@Override
 		public void exitRule(ParseTreeListener listener) {
-			if ( listener instanceof MinhaGramaticaListener ) ((MinhaGramaticaListener)listener).exitDec(this);
+			if ( listener instanceof Portugues2Listener ) ((Portugues2Listener)listener).exitDec(this);
 		}
 	}
 
@@ -128,10 +130,10 @@ public class MinhaGramaticaParser extends Parser {
 	}
 
 	public static final String _serializedATN =
-		"\u0004\u0001\r\u0005\u0002\u0000\u0007\u0000\u0001\u0000\u0001\u0000\u0001"+
-		"\u0000\u0000\u0000\u0001\u0000\u0000\u0000\u0003\u0000\u0002\u0001\u0000"+
-		"\u0000\u0000\u0002\u0003\u0005\u0001\u0000\u0000\u0003\u0001\u0001\u0000"+
-		"\u0000\u0000\u0000";
+		"\u0004\u0001\u0013\u0005\u0002\u0000\u0007\u0000\u0001\u0000\u0001\u0000"+
+		"\u0001\u0000\u0000\u0000\u0001\u0000\u0000\u0000\u0003\u0000\u0002\u0001"+
+		"\u0000\u0000\u0000\u0002\u0003\u0005\u0001\u0000\u0000\u0003\u0001\u0001"+
+		"\u0000\u0000\u0000\u0000";
 	public static final ATN _ATN =
 		new ATNDeserializer().deserialize(_serializedATN.toCharArray());
 	static {

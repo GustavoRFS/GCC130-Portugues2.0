@@ -7,10 +7,10 @@ import java.io.IOException;
 public class ExemploLexer {
 
     public static void  main (String[] args){
-        String filename = "C:\\Users\\granc\\IdeaProjects\\untitled\\codigo.txt";
+        String filename = "/home/felipe/Área de Trabalho/GCC130-Portugues2.0/codigo.txt";
         try{
             CharStream input = CharStreams.fromFileName(filename);
-            MinhaGramaticaLexer lexer = new MinhaGramaticaLexer(input);
+            Portugues2Lexer lexer = new Portugues2Lexer(input);
             Token token;
             while (!lexer._hitEOF){
                 token = lexer.nextToken();

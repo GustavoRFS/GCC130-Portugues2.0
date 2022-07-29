@@ -1,12 +1,12 @@
-grammar MinhaGramatica;
+grammar Portugues2;
 
 dec: 'DECLARACOES';
 TIPO: 'int'|'flutuante'|'texto'|'vouf';
 ATR: '=D';
-A: 'a';
 AP: '(';
 FP: ')';
-ESC: 'ESCREVA';
+AC: '{';
+FC: '}';
 ID: LETRA(DIGITO|LETRA)*;
 NUM: DIGITO+('.'DIGITO+)?;
 OP_ARIT: '+'|'-'|'*'|'/'|'//'|'%';
@@ -17,7 +17,6 @@ REP:'para'|'enquanto';
 LER:'RECEBA';
 ESCREVER:'TÓMI';
 LINECOMMENT: '#' ~[\r\n]* -> skip;
-DEFFUNC: TIPO ID AP TIPO ID FP ;
 fragment LETRA: [a-zA-Z];
 fragment DIGITO: [0-9];
 WS: [ \r\t\n]* ->skip;

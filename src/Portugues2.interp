@@ -1,0 +1,50 @@
+token literal names:
+null
+'DECLARACOES'
+null
+'=D'
+'('
+')'
+'{'
+'}'
+null
+null
+null
+null
+null
+null
+null
+'RECEBA'
+'TÓMI'
+null
+null
+null
+
+token symbolic names:
+null
+null
+TIPO
+ATR
+AP
+FP
+AC
+FC
+ID
+NUM
+OP_ARIT
+OP_REL
+OP_BOL
+COND
+REP
+LER
+ESCREVER
+LINECOMMENT
+WS
+ErrorChar
+
+rule names:
+dec
+
+
+atn:
+[4, 1, 19, 5, 2, 0, 7, 0, 1, 0, 1, 0, 1, 0, 0, 0, 1, 0, 0, 0, 3, 0, 2, 1, 0, 0, 0, 2, 3, 5, 1, 0, 0, 3, 1, 1, 0, 0, 0, 0]
