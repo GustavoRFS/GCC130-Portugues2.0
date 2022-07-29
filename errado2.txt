@@ -3,10 +3,10 @@ int x;
 
 CODIGO
     # Informa se um número é maior, menor ou igual a 10
-    123RECEBA x;
+    RECEBA x;
     se (X < 10) {
         TOMI "MENOR";
-    } senao se (X = 10) {
+    } senao se (X = 10) { # -> Aqui está o erro (deveria ser =D)
         TOMI "IGUAL";
     } senao {
         TOMI "MAIOR"

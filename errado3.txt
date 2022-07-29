@@ -1,8 +1,5 @@
 DECLARACOES
-int 123x = []
+int x;
 
 CODIGO
-    RECEBA x;
-    enquanto(x != @10) {
-        RECEBA x;
-    }
+    [] =D x # -> Aqui está o erro ([ ] não está na linguagem)

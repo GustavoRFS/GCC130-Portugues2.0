@@ -2,7 +2,7 @@ DECLARACOES
 int x;
 
 CODIGO
-    @
+    @ # -> Aqui está o erro
     RECEBA x;
     se (X < 10) {
         TOMI "MENOR";
