@@ -7,13 +7,13 @@ import org.antlr.v4.runtime.tree.ParseTreeListener;
  */
 public interface Portugues2Listener extends ParseTreeListener {
 	/**
-	 * Enter a parse tree produced by {@link Portugues2Parser#dec}.
+	 * Enter a parse tree produced by {@link Portugues2Parser#x}.
 	 * @param ctx the parse tree
 	 */
-	void enterDec(Portugues2Parser.DecContext ctx);
+	void enterX(Portugues2Parser.XContext ctx);
 	/**
-	 * Exit a parse tree produced by {@link Portugues2Parser#dec}.
+	 * Exit a parse tree produced by {@link Portugues2Parser#x}.
 	 * @param ctx the parse tree
 	 */
-	void exitDec(Portugues2Parser.DecContext ctx);
+	void exitX(Portugues2Parser.XContext ctx);
 }

@@ -15,13 +15,13 @@ public class Portugues2BaseListener implements Portugues2Listener {
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void enterDec(Portugues2Parser.DecContext ctx) { }
+	@Override public void enterX(Portugues2Parser.XContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void exitDec(Portugues2Parser.DecContext ctx) { }
+	@Override public void exitX(Portugues2Parser.XContext ctx) { }
 
 	/**
 	 * {@inheritDoc}

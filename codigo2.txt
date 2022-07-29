@@ -6,7 +6,7 @@ CODIGO
     RECEBA x;
     se (X < 10) {
         TOMI "MENOR";
-    } senao se (X = 10) {
+    } senao se (X == 10) {
         TOMI "IGUAL";
     } senao {
         TOMI "MAIOR"

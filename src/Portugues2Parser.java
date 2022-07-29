@@ -16,30 +16,31 @@ public class Portugues2Parser extends Parser {
 	protected static final PredictionContextCache _sharedContextCache =
 		new PredictionContextCache();
 	public static final int
-		T__0=1, TIPO=2, V=3, F=4, TEXTO=5, ATR=6, AP=7, FP=8, AC=9, FC=10, ID=11, 
-		NUM=12, OP_ARIT=13, OP_REL=14, OP_BOL=15, COND=16, REP=17, LER=18, ESCREVER=19, 
-		LINECOMMENT=20, WS=21, ErrorChar=22;
+		T__0=1, WS=2, COD=3, DEC=4, TIPO=5, V=6, F=7, TEXTO=8, ATR=9, AP=10, FP=11, 
+		AC=12, FC=13, PEV=14, OP_ARIT=15, OP_REL=16, OP_BOL=17, COND=18, REP=19, 
+		LER=20, ESCREVER=21, LINECOMMENT=22, ID=23, NUM=24, ErrorChar=25;
 	public static final int
-		RULE_dec = 0;
+		RULE_x = 0;
 	private static String[] makeRuleNames() {
 		return new String[] {
-			"dec"
+			"x"
 		};
 	}
 	public static final String[] ruleNames = makeRuleNames();
 
 	private static String[] makeLiteralNames() {
 		return new String[] {
-			null, "'DECLARACOES'", null, "'v'", "'f'", null, "'=D'", "'('", "')'", 
-			"'{'", "'}'", null, null, null, null, null, null, null, "'RECEBA'", "'T\\u00D3MI'"
+			null, "'&'", null, "'CODIGO'", "'DECLARACOES'", null, "'v'", "'f'", null, 
+			"'=D'", "'('", "')'", "'{'", "'}'", "';'", null, null, null, null, null, 
+			"'RECEBA'", "'TOMI'"
 		};
 	}
 	private static final String[] _LITERAL_NAMES = makeLiteralNames();
 	private static String[] makeSymbolicNames() {
 		return new String[] {
-			null, null, "TIPO", "V", "F", "TEXTO", "ATR", "AP", "FP", "AC", "FC", 
-			"ID", "NUM", "OP_ARIT", "OP_REL", "OP_BOL", "COND", "REP", "LER", "ESCREVER", 
-			"LINECOMMENT", "WS", "ErrorChar"
+			null, null, "WS", "COD", "DEC", "TIPO", "V", "F", "TEXTO", "ATR", "AP", 
+			"FP", "AC", "FC", "PEV", "OP_ARIT", "OP_REL", "OP_BOL", "COND", "REP", 
+			"LER", "ESCREVER", "LINECOMMENT", "ID", "NUM", "ErrorChar"
 		};
 	}
 	private static final String[] _SYMBOLIC_NAMES = makeSymbolicNames();
@@ -93,24 +94,24 @@ public class Portugues2Parser extends Parser {
 		_interp = new ParserATNSimulator(this,_ATN,_decisionToDFA,_sharedContextCache);
 	}
 
-	public static class DecContext extends ParserRuleContext {
-		public DecContext(ParserRuleContext parent, int invokingState) {
+	public static class XContext extends ParserRuleContext {
+		public XContext(ParserRuleContext parent, int invokingState) {
 			super(parent, invokingState);
 		}
-		@Override public int getRuleIndex() { return RULE_dec; }
+		@Override public int getRuleIndex() { return RULE_x; }
 		@Override
 		public void enterRule(ParseTreeListener listener) {
-			if ( listener instanceof Portugues2Listener ) ((Portugues2Listener)listener).enterDec(this);
+			if ( listener instanceof Portugues2Listener ) ((Portugues2Listener)listener).enterX(this);
 		}
 		@Override
 		public void exitRule(ParseTreeListener listener) {
-			if ( listener instanceof Portugues2Listener ) ((Portugues2Listener)listener).exitDec(this);
+			if ( listener instanceof Portugues2Listener ) ((Portugues2Listener)listener).exitX(this);
 		}
 	}
 
-	public final DecContext dec() throws RecognitionException {
-		DecContext _localctx = new DecContext(_ctx, getState());
-		enterRule(_localctx, 0, RULE_dec);
+	public final XContext x() throws RecognitionException {
+		XContext _localctx = new XContext(_ctx, getState());
+		enterRule(_localctx, 0, RULE_x);
 		try {
 			enterOuterAlt(_localctx, 1);
 			{
@@ -130,7 +131,7 @@ public class Portugues2Parser extends Parser {
 	}
 
 	public static final String _serializedATN =
-		"\u0004\u0001\u0016\u0005\u0002\u0000\u0007\u0000\u0001\u0000\u0001\u0000"+
+		"\u0004\u0001\u0019\u0005\u0002\u0000\u0007\u0000\u0001\u0000\u0001\u0000"+
 		"\u0001\u0000\u0000\u0000\u0001\u0000\u0000\u0000\u0003\u0000\u0002\u0001"+
 		"\u0000\u0000\u0000\u0002\u0003\u0005\u0001\u0000\u0000\u0003\u0001\u0001"+
 		"\u0000\u0000\u0000\u0000";

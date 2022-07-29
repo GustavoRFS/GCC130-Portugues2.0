@@ -1,5 +1,8 @@
 token literal names:
 null
+'&'
+null
+'CODIGO'
 'DECLARACOES'
 null
 'v'
@@ -10,15 +13,15 @@ null
 ')'
 '{'
 '}'
-null
-null
+';'
 null
 null
 null
 null
 null
 'RECEBA'
-'TÓMI'
+'TOMI'
+null
 null
 null
 null
@@ -26,6 +29,9 @@ null
 token symbolic names:
 null
 null
+WS
+COD
+DEC
 TIPO
 V
 F
@@ -35,8 +41,7 @@ AP
 FP
 AC
 FC
-ID
-NUM
+PEV
 OP_ARIT
 OP_REL
 OP_BOL
@@ -45,12 +50,13 @@ REP
 LER
 ESCREVER
 LINECOMMENT
-WS
+ID
+NUM
 ErrorChar
 
 rule names:
-dec
+x
 
 
 atn:
-[4, 1, 22, 5, 2, 0, 7, 0, 1, 0, 1, 0, 1, 0, 0, 0, 1, 0, 0, 0, 3, 0, 2, 1, 0, 0, 0, 2, 3, 5, 1, 0, 0, 3, 1, 1, 0, 0, 0, 0]
+[4, 1, 25, 5, 2, 0, 7, 0, 1, 0, 1, 0, 1, 0, 0, 0, 1, 0, 0, 0, 3, 0, 2, 1, 0, 0, 0, 2, 3, 5, 1, 0, 0, 3, 1, 1, 0, 0, 0, 0]

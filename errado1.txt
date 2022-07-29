@@ -2,7 +2,7 @@ DECLARACOES
 int x;
 
 CODIGO
-    @Informa se um número é maior, menor ou igual a 10@
+    @
     RECEBA x;
     se (X < 10) {
         TOMI "MENOR";
