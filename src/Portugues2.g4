@@ -2,6 +2,9 @@ grammar Portugues2;
 
 dec: 'DECLARACOES';
 TIPO: 'int'|'flutuante'|'texto'|'vouf';
+V: 'v';
+F: 'f';
+TEXTO: '"'(DIGITO|LETRA)*'"';
 ATR: '=D';
 AP: '(';
 FP: ')';

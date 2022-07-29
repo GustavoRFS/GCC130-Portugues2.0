@@ -16,9 +16,9 @@ public class Portugues2Parser extends Parser {
 	protected static final PredictionContextCache _sharedContextCache =
 		new PredictionContextCache();
 	public static final int
-		T__0=1, TIPO=2, ATR=3, AP=4, FP=5, AC=6, FC=7, ID=8, NUM=9, OP_ARIT=10, 
-		OP_REL=11, OP_BOL=12, COND=13, REP=14, LER=15, ESCREVER=16, LINECOMMENT=17, 
-		WS=18, ErrorChar=19;
+		T__0=1, TIPO=2, V=3, F=4, TEXTO=5, ATR=6, AP=7, FP=8, AC=9, FC=10, ID=11, 
+		NUM=12, OP_ARIT=13, OP_REL=14, OP_BOL=15, COND=16, REP=17, LER=18, ESCREVER=19, 
+		LINECOMMENT=20, WS=21, ErrorChar=22;
 	public static final int
 		RULE_dec = 0;
 	private static String[] makeRuleNames() {
@@ -30,16 +30,16 @@ public class Portugues2Parser extends Parser {
 
 	private static String[] makeLiteralNames() {
 		return new String[] {
-			null, "'DECLARACOES'", null, "'=D'", "'('", "')'", "'{'", "'}'", null, 
-			null, null, null, null, null, null, "'RECEBA'", "'T\\u00D3MI'"
+			null, "'DECLARACOES'", null, "'v'", "'f'", null, "'=D'", "'('", "')'", 
+			"'{'", "'}'", null, null, null, null, null, null, null, "'RECEBA'", "'T\\u00D3MI'"
 		};
 	}
 	private static final String[] _LITERAL_NAMES = makeLiteralNames();
 	private static String[] makeSymbolicNames() {
 		return new String[] {
-			null, null, "TIPO", "ATR", "AP", "FP", "AC", "FC", "ID", "NUM", "OP_ARIT", 
-			"OP_REL", "OP_BOL", "COND", "REP", "LER", "ESCREVER", "LINECOMMENT", 
-			"WS", "ErrorChar"
+			null, null, "TIPO", "V", "F", "TEXTO", "ATR", "AP", "FP", "AC", "FC", 
+			"ID", "NUM", "OP_ARIT", "OP_REL", "OP_BOL", "COND", "REP", "LER", "ESCREVER", 
+			"LINECOMMENT", "WS", "ErrorChar"
 		};
 	}
 	private static final String[] _SYMBOLIC_NAMES = makeSymbolicNames();
@@ -130,7 +130,7 @@ public class Portugues2Parser extends Parser {
 	}
 
 	public static final String _serializedATN =
-		"\u0004\u0001\u0013\u0005\u0002\u0000\u0007\u0000\u0001\u0000\u0001\u0000"+
+		"\u0004\u0001\u0016\u0005\u0002\u0000\u0007\u0000\u0001\u0000\u0001\u0000"+
 		"\u0001\u0000\u0000\u0000\u0001\u0000\u0000\u0000\u0003\u0000\u0002\u0001"+
 		"\u0000\u0000\u0000\u0002\u0003\u0005\u0001\u0000\u0000\u0003\u0001\u0001"+
 		"\u0000\u0000\u0000\u0000";
