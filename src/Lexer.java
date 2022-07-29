@@ -3,8 +3,7 @@ import org.antlr.v4.runtime.CharStreams;
 import org.antlr.v4.runtime.Token;
 import java.io.IOException;
 
-public class ExemploLexer {
-
+public class Lexer {
     public static void  main (String[] args){
         if (args.length == 0) {
             throw new RuntimeException("Arquivo não informado");
