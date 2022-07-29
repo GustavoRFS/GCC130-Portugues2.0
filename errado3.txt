@@ -1,0 +1,8 @@
+DECLARACOES
+int 123x = []
+
+CODIGO
+    RECEBA x;
+    enquanto(x != @10) {
+        RECEBA x;
+    }
