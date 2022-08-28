@@ -12,6 +12,7 @@ null
 null
 null
 null
+null
 'CODIGO'
 'DECLARACOES'
 null
@@ -28,9 +29,11 @@ null
 null
 null
 null
+'senao'
 null
 'RECEBA'
 'TOMI'
+null
 null
 null
 null
@@ -39,17 +42,18 @@ null
 token symbolic names:
 null
 null
-WS
+PROGRAMA
+DECLARACOES
+IDENTIFICACAO
+CODIGO
+COMANDO
 EXPRESSAOARIT
 EXPRESSAOBOOL
 ATRIBUICAO
 ENTRADASAIDA
+EXPRESSAOCONDICIONAL
+EXPRESSAOREPETICAO
 VOUF
-COMANDO
-PROGRAMA
-DECLARACOES
-TESTE
-CODIGO
 COD
 DEC
 TIPO
@@ -66,12 +70,14 @@ OP_ARIT
 OP_REL
 OP_BOL
 COND
+CONDSENAO
 REP
 LER
 ESCREVER
-LINECOMMENT
+COMENTARIO
 ID
 NUM
+WS
 ErrorChar
 
 rule names:
@@ -79,4 +85,4 @@ x
 
 
 atn:
-[4, 1, 35, 5, 2, 0, 7, 0, 1, 0, 1, 0, 1, 0, 0, 0, 1, 0, 0, 0, 3, 0, 2, 1, 0, 0, 0, 2, 3, 5, 1, 0, 0, 3, 1, 1, 0, 0, 0, 0]
+[4, 1, 38, 5, 2, 0, 7, 0, 1, 0, 1, 0, 1, 0, 0, 0, 1, 0, 0, 0, 3, 0, 2, 1, 0, 0, 0, 2, 3, 5, 1, 0, 0, 3, 1, 1, 0, 0, 0, 0]

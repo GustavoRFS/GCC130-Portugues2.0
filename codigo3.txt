@@ -3,6 +3,6 @@ int x;
 
 CODIGO
     RECEBA x;
-    enquanto(x != 10) {
+    enquanto (x != 10) {
         RECEBA x;
     }
