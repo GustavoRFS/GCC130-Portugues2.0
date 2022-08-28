@@ -5,11 +5,11 @@ import java.io.IOException;
 
 public class Lexer {
     public static void  main (String[] args){
-        if (args.length == 0) {
-            throw new RuntimeException("Arquivo não informado");
-        }
-        String fileName = args[0];
-        String filePath = System.getProperty("user.dir")+"/"+fileName;
+        //if (args.length == 0) {
+        //    throw new RuntimeException("Arquivo não informado");
+        //}
+        //String fileName = args[0];
+        String filePath = "/home/felipe/Área de Trabalho/GCC130-Portugues2.0/codigo1.txt";//System.getProperty("user.dir")+"/"+fileName;
         try{
             CharStream input = CharStreams.fromFileName(filePath);
             Portugues2Lexer lexer = new Portugues2Lexer(input);
