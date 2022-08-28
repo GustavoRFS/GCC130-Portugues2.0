@@ -1,0 +1,11 @@
+int primeiro;
+flutuante segundo;
+int terceiro;
+
+CODIGO
+    40.0 =D primeiro;
+    10 =D segundo;
+    (primeiro+segundo) =D terceiro;
+    TOMI terceiro;
+
+DECLARACOES # Declaracoes deve estar no inicio do programa

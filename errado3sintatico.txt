@@ -1,0 +1,8 @@
+DECLARACOES
+int x;
+
+CODIGO
+    x;
+    enquanto(x != 10) {
+        RECEBA x;
+    }
