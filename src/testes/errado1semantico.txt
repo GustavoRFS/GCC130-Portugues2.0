@@ -1,6 +1,6 @@
 DECLARACOES
 flutuante primeiro;
-flutuante segundo;
+flutuante primeiro;
 int terceiro;
 
 CODIGO
@@ -8,3 +8,4 @@ CODIGO
     10 =D segundo;
     primeiro + segundo =D terceiro;
     TOMI terceiro;
+

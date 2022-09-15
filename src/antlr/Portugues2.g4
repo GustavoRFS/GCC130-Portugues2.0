@@ -5,47 +5,45 @@ grammar Portugues2;
     package antlr;
 }
 
-x: '&';
+programa: declaracoes  codigo * #NPrograma;
+declaracoes: dec  identificacao* #NDeclaracoes;
+identificacao: tipo  ID pev #NIdentificacao;
+codigo: cod  comando* #NCodigo;
+comando:  ( (entradasaida|atribuicao) pev | (expressaocondicional|expressaorepeticao)) #NComando;
+expressaoarit: ( (ID|NUM)  op_arit  (ID|NUM) ) #NExpressaoArit; // | (ap  (ID|NUM)  op_arit  (ID|NUM)  fp);
+expressaobool: ( (ID|vouf) | (ID|expressaoarit|vouf|NUM)  op_rel  (ID|expressaoarit|vouf|NUM) ) #NExpressaoBool;// | ap ( vouf | (ID|expressaoarit| vouf ) op_rel (ID|expressaoarit | vouf) ) fp op_bol ap expressaobool fp;
+atribuicao: (NUM|TEXTO|expressaoarit|expressaobool|v|f )  atr  ID #NAtribuicao;
+entradasaida: (ler|escrever)  (ID|NUM|TEXTO|expressaoarit|expressaobool) #NEntradaSaida;
+expressaocondicional: cond  ap  (expressaobool)  fp  ac  comando  fc #NExpressaoRepeticao1| condsenao  ac  comando  fc #NExpressaoCondicional2;
+expressaorepeticao: rep  ap  (expressaobool)  fp  ac  comando  fc #NExpressaoRepeticao;
+vouf: v #NF| f #NV;
 
-PROGRAMA: DECLARACOES WS CODIGO WS*;
-DECLARACOES: DEC WS IDENTIFICACAO*;
-IDENTIFICACAO: TIPO WS ID PEV WS;
-CODIGO: COD WS COMANDO*;
-COMANDO: WS? ( (ENTRADASAIDA|ATRIBUICAO) PEV | (COMENTARIO|EXPRESSAOCONDICIONAL|EXPRESSAOREPETICAO));
-EXPRESSAOARIT: ( (ID|NUM) WS OP_ARIT WS (ID|NUM) ); // | (AP WS? (ID|NUM) WS? OP_ARIT WS (ID|NUM) WS? FP);
-EXPRESSAOBOOL: ( (ID|VOUF) | (ID|EXPRESSAOARIT|VOUF|NUM) WS OP_REL WS (ID|EXPRESSAOARIT|VOUF|NUM) );// | AP ( VOUF | (ID|EXPRESSAOARIT| VOUF ) OP_REL (ID|EXPRESSAOARIT | VOUF) ) FP OP_BOL AP EXPRESSAOBOOL FP;
-ATRIBUICAO: (NUM|TEXTO|EXPRESSAOARIT|EXPRESSAOBOOL ) WS ATR WS ID;
-ENTRADASAIDA: (LER|ESCREVER) WS (ID|NUM|TEXTO|EXPRESSAOARIT|EXPRESSAOBOOL);
-EXPRESSAOCONDICIONAL: COND WS? AP WS? (EXPRESSAOBOOL) WS? FP WS? AC WS? COMANDO WS? FC | CONDSENAO WS? AC WS? COMANDO WS? FC;
-EXPRESSAOREPETICAO: REP WS? AP WS? (EXPRESSAOBOOL) WS? FP WS? AC WS? COMANDO WS? FC;
-VOUF: V | F;
+cod: 'CODIGO'; // Usado
+dec: 'DECLARACOES'; // Usado
 
-COD: 'CODIGO'; // Usado
-DEC: 'DECLARACOES'; // Usado
-
-TIPO: 'int'|'flutuante'|'texto'|'vouf'; // Usado
-V: 'v'; // Usado
-F: 'f'; // Usado
+tipo: 'int'|'flutuante'|'texto'|'vouf'; // Usado
+v: 'v'; // Usado
+f: 'f'; // Usado
 TEXTO: '"'(DIGITO|LETRA)*'"'; // Usado
-ATR: '=D'; // Usado
-AP: '('; // Usado
-FP: ')'; // Usado
-AC: '{';
-FC: '}';
-PEV: ';';
-OP_ARIT: '+'|'-'|'*'|'/'|'//'|'%'; // Usado
-OP_REL: '=='|'<'|'>'|'<='|'>='|'!='; // Usado
-OP_BOL: 'e'|'ou'|'xou'|'nao'; // Usado
-COND:'se'|'senao se';
-CONDSENAO: 'senao';
-REP:'para'|'enquanto';
-LER:'RECEBA'; // Usado
-ESCREVER:'TOMI'; // Usado
+atr: '=D'; // Usado
+ap: '('; // Usado
+fp: ')'; // Usado
+ac: '{';
+fc: '}';
+pev: ';';
+op_arit: '+'|'-'|'*'|'/'|'//'|'%'; // Usado
+op_rel: '=='|'<'|'>'|'<='|'>='|'!='; // Usado
+op_bol: 'e'|'ou'|'xou'|'nao'; // Usado
+cond:'se'|'senao se';
+condsenao: 'senao';
+rep:'para'|'enquanto';
+ler:'RECEBA'; // Usado
+escrever:'TOMI'; // Usado
 COMENTARIO: '#' .*? [\n] -> skip;
 ID: LETRA(DIGITO|LETRA)*; // Usado
 NUM: DIGITO+('.'DIGITO+)?; // Usado
-fragment LETRA: [a-zA-Z];
-fragment DIGITO: [0-9];
+LETRA: [a-zA-Z];
+DIGITO: [0-9];
 WS: [ \r\t\n]+ -> skip ;
 
 ErrorChar: . ;

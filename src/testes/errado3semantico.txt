@@ -4,7 +4,8 @@ flutuante segundo;
 int terceiro;
 
 CODIGO
-    10.0 =D primeiro;
+    v =D primeiro;
     10 =D segundo;
     primeiro + segundo =D terceiro;
     TOMI terceiro;
+
