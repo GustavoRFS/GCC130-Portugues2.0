@@ -1,5 +1,10 @@
 grammar Portugues2;
 
+
+@header{
+    package antlr;
+}
+
 x: '&';
 
 PROGRAMA: DECLARACOES WS CODIGO WS*;
