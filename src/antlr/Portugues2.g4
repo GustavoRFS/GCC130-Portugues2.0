@@ -10,7 +10,7 @@ declaracoes: dec  identificacao* #NDeclaracoes;
 identificacao: tipo  ID pev #NIdentificacao;
 codigo: cod  comando* #NCodigo;
 comando:  ( (entradasaida|atribuicao) pev | (expressaocondicional|expressaorepeticao)) #NComando;
-expressaoarit: ( (ID|NUM)  op_arit  (ID|NUM) ) #NExpressaoArit; // | (ap  (ID|NUM)  op_arit  (ID|NUM)  fp);
+    expressaoarit: ( (ID|NUM)  op_arit  (ID|NUM) ) #NExpressaoArit; // | (ap  (ID|NUM)  op_arit  (ID|NUM)  fp);
 expressaobool: ( (ID|vouf) | (ID|expressaoarit|vouf|NUM)  op_rel  (ID|expressaoarit|vouf|NUM) ) #NExpressaoBool;// | ap ( vouf | (ID|expressaoarit| vouf ) op_rel (ID|expressaoarit | vouf) ) fp op_bol ap expressaobool fp;
 atribuicao: (NUM|TEXTO|expressaoarit|expressaobool|v|f )  atr  ID #NAtribuicao;
 entradasaida: (ler|escrever)  (ID|NUM|TEXTO|expressaoarit|expressaobool) #NEntradaSaida;

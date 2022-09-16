@@ -1,10 +1,10 @@
 DECLARACOES
 flutuante primeiro;
 flutuante segundo;
-int terceiro;
+flutuante terceiro;
 
 CODIGO
     10.0 =D primeiro;
-    10 =D segundo;
+    10.0 =D segundo;
     primeiro + segundo =D terceiro;
     TOMI terceiro;
