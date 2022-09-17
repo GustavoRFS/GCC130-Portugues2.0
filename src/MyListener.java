@@ -40,8 +40,10 @@ public class MyListener extends Portugues2BaseListener {
 
     @Override
     public  void enterNEntradaSaida(Portugues2Parser.NEntradaSaidaContext ctx){
-        String id = ctx.ID().getText();
-        validarID(id) ;
+        if(ctx.ID() != null){
+            String id = ctx.ID().getText();
+            validarID(id) ;
+        }
     }
 
     @Override
@@ -97,10 +99,12 @@ public class MyListener extends Portugues2BaseListener {
                    if(ctx.NUM() == null){
                        if(ctx.expressaoarit() == null){
                            System.out.println("Conversão inválida:" + id + " é do tipo int");
+                           OcorreuErro = true;
                        }
                    }else{
                        if(ctx.NUM().getText().contains(".")){
                            System.out.println("Conversão inválida:" + id + " é do tipo int, tentativa de atribuir um flutuante a ele");
+                           OcorreuErro = true;
                        }
                    }
                    break;
@@ -109,10 +113,12 @@ public class MyListener extends Portugues2BaseListener {
                    if(ctx.NUM() == null){
                        if(ctx.expressaoarit() == null) {
                            System.out.println("Conversão inválida:" + id + " é do tipo flutuante");
+                           OcorreuErro = true;
                        }
                    }else{
                        if(!ctx.NUM().getText().contains(".")){
                            System.out.println("Conversão inválida:" + id + " é do tipo flutuante, tentativa de atribuir um inteiro a ele");
+                           OcorreuErro = true;
                        }
                    }
 

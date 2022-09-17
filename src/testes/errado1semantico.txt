@@ -1,6 +1,6 @@
 DECLARACOES
 flutuante primeiro;
-flutuante =D primeiro;
+flutuante  primeiro;
 int terceiro;
 
 CODIGO

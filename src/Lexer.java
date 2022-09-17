@@ -13,7 +13,7 @@ import java.io.InputStream;
 public class Lexer {
     public static void main(String[] args){
         //parsing the input
-        String nomeArq = "codigo1";
+        String nomeArq = "errado3semantico";
         Portugues2Parser parser = getParser(System.getProperty("user.dir")+"/src/testes/" +nomeArq + ".txt");
 
         ParseTree ast = parser.programa();
